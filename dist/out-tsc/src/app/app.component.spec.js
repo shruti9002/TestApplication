@@ -1,0 +1,38 @@
+import { TestBed, async } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { AppComponent } from './app.component';
+import { AlertComponent } from './alert/alert.component';
+import { AlertService } from './services/alert.service';
+describe('AppComponent', function () {
+    beforeEach(async(function () {
+        TestBed.configureTestingModule({
+            imports: [
+                RouterTestingModule
+            ],
+            declarations: [
+                AppComponent,
+                AlertComponent
+            ],
+            providers: [
+                AlertService
+            ]
+        }).compileComponents();
+    }));
+    it('should create the app', function () {
+        var fixture = TestBed.createComponent(AppComponent);
+        var app = fixture.debugElement.componentInstance;
+        expect(app).toBeTruthy();
+    });
+    it("should have as title 'profileCheck'", function () {
+        var fixture = TestBed.createComponent(AppComponent);
+        var app = fixture.debugElement.componentInstance;
+        expect(app.title).toEqual('profileCheck');
+    });
+    it('should render title in a h1 tag', function () {
+        var fixture = TestBed.createComponent(AppComponent);
+        fixture.detectChanges();
+        var compiled = fixture.debugElement.nativeElement;
+        expect(compiled.querySelector('h1').textContent).toContain('Welcome to profileCheck!');
+    });
+});
+//# sourceMappingURL=app.component.spec.js.map
