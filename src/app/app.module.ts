@@ -19,7 +19,7 @@ import { fakeBackendProvider } from './helpers/fake-backend';
 import { JwtInterceptor } from './helpers/jwt.interceptor';
 import { AdminComponent } from './home/admin/admin.component';
 import { StudentComponent } from './home/student/student.component';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/compiler/src/core';
+import { TitleCasePipe } from './shared/title-case.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,8 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/compiler/src/core';
     RegisterComponent,
     AlertComponent,
     AdminComponent,
-    StudentComponent
+    StudentComponent,
+    TitleCasePipe
   ],
   imports: [
     BrowserModule,
